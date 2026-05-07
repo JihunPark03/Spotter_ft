@@ -1,5 +1,6 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
+import sys
 
 model_name = "../Qwen3.5-2B-Base"
 
@@ -15,7 +16,7 @@ model = AutoModelForCausalLM.from_pretrained(
     trust_remote_code=True
 )
 
-prompt = "Explain what a local LLM is in simple words."
+prompt = sys.argv[1]
 
 inputs = tokenizer(
     prompt,
