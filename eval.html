@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- 구글 웹폰트(선택) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet" />
+
+<!-- 외부 CSS -->
+<link rel="stylesheet" href="style.css" />
+<title>SPOTTER Demo</title>
+</head>
+
+<body>
+  <div class="card">
+    <div class="top-bar">
+      <img src="logo.svg" alt="SPOTTER logo" class="brand" width="120" height="auto" />
+      <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">
+        <span id="langToggleLabel">EN</span>
+      </button>
+    </div>
+
+    <!-- Top Tabs -->
+    <div class="tab-row">
+    <a href="popup.html" style="text-decoration: none; flex:1; display:flex;">
+      <button class="tab-btn">
+        <span id="tabCheckText">📝<b> 리뷰 검사하기</b></span>
+      </button>
+    </a>
+      <button class="tab-btn primary">
+        <span id="tabEvalText">📊<b> 리뷰 평가하기</b></span>
+      </button>
+    </div>
+
+    <!-- Recognized Review -->
+    <section>
+      <div class="review-box">
+        <div class="sub-tabs">
+            <h3 class="section-title" id="reviewTitle">인식된 리뷰</h3>
+        </div>
+
+        <p class="review-text">
+            <div id="text" class="placeholder"></div>
+        </p>
+      </div>
+    </section>
+    <div class="eval-row">
+        <button class="btn isAd" id="isAdBtn">광고 같아요</button>
+        <button class="btn confirm" id="confirmBtn">직접 쓴 리뷰같아요</button>
+    </div>
+    <script type="module" src="eval.js"></script>
+</body>
+</html>
